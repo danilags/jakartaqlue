@@ -12,8 +12,9 @@ export const fetchQlueLocation = () => dispatch => {
 
   axios.get(url)
   .then(res => {
-    console.log("ini datanya : ", res.data)
-    dispatch(getQlueLocation(res.data))
+    setTimeout(function() {
+      dispatch(getQlueLocation(res.data))
+    }, 4000)
   })
   .catch(err => { console.log(err)})
 }
