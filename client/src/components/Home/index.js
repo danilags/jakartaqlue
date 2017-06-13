@@ -33,9 +33,9 @@ class Home extends React.Component {
             <Marker key={index} position={[location.lat, location.lng]} icon={myIcon} >
               <Popup>
                 <span>
-                  Nomor: {location.placemark_id}. <br />
-                  Lokasi: {location.name}. <br />
-                  Alamat: {location.address} <br />
+                  Number: {location.placemark_id}. <br />
+                  Location: {location.name}. <br />
+                  Address: {location.address} <br />
                   Latitude: {location.lat} <br />
                   Longitude: {location.lng} <br />
                 </span>

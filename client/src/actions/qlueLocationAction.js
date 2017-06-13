@@ -14,7 +14,7 @@ export const fetchQlueLocation = () => dispatch => {
   .then(res => {
     setTimeout(function() {
       dispatch(getQlueLocation(res.data))
-    }, 4000)
+    }, 3000)
   })
   .catch(err => { console.log(err)})
 }
