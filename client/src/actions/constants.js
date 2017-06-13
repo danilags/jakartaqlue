@@ -1,0 +1,1 @@
+export const GET_QLUE_LOCATION = 'GET_QLUE_LOCATION';
