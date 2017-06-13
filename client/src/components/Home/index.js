@@ -5,13 +5,9 @@ import L from 'leaflet';
 
 import '../../App.css';
 
-
 import { fetchQlueLocation } from '../../actions/qlueLocationAction'
 
-
-
-const myIcon = L.icon({ iconUrl: 'http://www.qlue.co.id/vacancy/svc/icon-marker.png', iconSize: [25, 25], iconAnchor: [25, 25], popupAnchor: [-3, -26] })
-
+const myIcon = L.icon({ iconUrl: 'http://www.qlue.co.id/vacancy/svc/icon-marker.png', iconSize: [40, 40], iconAnchor: [25, 25], popupAnchor: [-3, -26] })
 
 class Home extends React.Component {
   constructor(props) {
@@ -87,7 +83,7 @@ class Home extends React.Component {
 }
 
 const mapStateToProps = state => {
-  console.log("ini state yang di home: ", state.qlueLocation);
+  // console.log("ini state yang di home: ", state.qlueLocation);
   return {
     qlueLocation: state.qlueLocation
   }

@@ -54,14 +54,14 @@ class App extends Component {
               <div className="nav">
                 <ul style={{ listStyle: 'none'}}>
                   <li style={{ padding: 10 }}><Link to="/" style={{ textDecoration: 'none' }}>Qlue</Link></li>
-                  <li style={{ padding: 10 }}><Link to="/article" style={{ textDecoration: 'none' }}>Waze</Link></li>
+                  <li style={{ padding: 10 }}><Link to="/waze" style={{ textDecoration: 'none' }}>Waze</Link></li>
                 </ul>
               </div>
               <div className="rightSide">
                 <div className="nav">
                   <Switch>
                     <Route exact path="/" component={Home}/>
-                    <Route path="/article" component={Waze}/>
+                    <Route path="/waze" component={Waze}/>
                   </Switch>
                 </div>
               </div>

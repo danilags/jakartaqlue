@@ -12,4 +12,12 @@ router.get('/qlue', function(req, res) {
   .catch(err => { console.log(err)})
 })
 
+router.get('/waze', function(req, res) {
+  axios.get('http://waze.qlue.id/jakarta/update/0atxn84I3hx2WmNm5ifPDZkJaLERZD9A.json')
+  .then(response => {
+    res.send(response.data.alerts)
+  })
+  .catch(err => { console.log(err)})
+  
+})
 module.exports = router
