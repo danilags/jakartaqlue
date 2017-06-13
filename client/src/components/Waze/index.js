@@ -28,12 +28,12 @@ class Waze extends React.Component {
         return (
           <Marker key={index} position={[location.location.y, location.location.x]}>
             <Popup>
-              <p>
-                Kota: {location.city} <br />
-                Jalan: {location.street} <br />
-                Latitude: {location.location.y} <br />
-                Longitude: {location.location.x} <br />
-              </p>
+              <div>
+                <p>City: {location.city}</p>
+                <p>Street: {location.street}</p>
+                <p>Latitude: {location.location.y}</p>
+                <p>Longitude: {location.location.x}</p>
+              </div>
             </Popup>
           </Marker>
         )
@@ -41,37 +41,32 @@ class Waze extends React.Component {
       </div>
     )
 
-    if (this.props.wazeLocation.length === 0 ) {
-      maps = (
-        <div className="loader-wrapper">
-          <div className="loader">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-        </div>
-      )
-    } else {
-      maps = (
-        <Map
-          className='animated lightSpeedIn'
-          style={{height: '100vh'}}
-          center={[-6.21462, 106.84513]}
-          zoom={11}>
-          <TileLayer url='https://api.mapbox.com/styles/v1/mapbox/outdoors-v10/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoicGlzYW5nZ29yZW5nIiwiYSI6ImNqMjh5OW45ZzAyc2wzMnFpd2RhNTllbXQifQ.s_ZDuvHljSJCVcsFqz708w' attribution='<attribution>' />
-          {marker}
-        </Map>
-      )
-    }
-
     return (
       <div>
-        { maps }
+      {
+        this.props.wazeLocation.length == 0 ?
+          <div className="loader-wrapper">
+            <div className="loader">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        :
+          <Map
+            className='animated lightSpeedIn'
+            style={{height: '100vh'}}
+            center={[-6.21462, 106.84513]}
+            zoom={11}>
+            <TileLayer url='https://api.mapbox.com/styles/v1/mapbox/outdoors-v10/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZGFuaWxhZ3MiLCJhIjoiY2ozdnRxamxnMDA3dTMybnBwNDhqcmloYyJ9.KHnkrXUOv2MGfn_0-QLvcQ' attribution='<attribution>' />
+            {marker}
+          </Map>
+      }
       </div>
     )
 
