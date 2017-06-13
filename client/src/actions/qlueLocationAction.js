@@ -8,7 +8,7 @@ export const getQlueLocation = location => ({
 })
 
 export const fetchQlueLocation = () => dispatch => {
-  let url = 'http://www.qlue.co.id/vacancy/svc/getDataExample.php'
+  let url = 'http://localhost:3000/maps/qlue'
 
   axios.get(url)
   .then(res => {

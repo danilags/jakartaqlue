@@ -1,5 +1,6 @@
 {
   "name": "client",
+  "proxy": "http://www.qlue.co.id",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,6 +9,7 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-leaflet": "^1.3.0",
+    "react-leaflet-markercluster": "^1.1.5",
     "react-redux": "^5.0.5",
     "redux": "^3.6.0",
     "redux-logger": "^3.0.6",
