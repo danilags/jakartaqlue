@@ -22,18 +22,8 @@ const styles = {
     flex: 1,
     justifyContent: 'flex-start'
   },
-  leftSide: {
-    width: '15%',
-    display: 'table',
-    float: 'left',
-    position: 'absolute',
-    background: '#ccc',
-    overflow: 'hidden',
-  },
-  rightSide: {
-    width: '85%',
-    display: 'table',
-    float: 'right'
+  listTab: {
+    padding: 10,
   }
 }
 
@@ -53,8 +43,8 @@ class App extends Component {
           <div className="wrapper">
               <div className="nav">
                 <ul style={{ listStyle: 'none'}}>
-                  <li style={{ padding: 10 }}><Link to="/" style={{ textDecoration: 'none' }}>Qlue</Link></li>
-                  <li style={{ padding: 10 }}><Link to="/waze" style={{ textDecoration: 'none' }}>Waze</Link></li>
+                  <li style={styles.listTab}><Link to="/" style={{ textDecoration: 'none' }}>Qlue</Link></li>
+                  <li style={styles.listTab}><Link to="/waze" style={{ textDecoration: 'none' }}>Waze</Link></li>
                 </ul>
               </div>
               <div className="rightSide">
